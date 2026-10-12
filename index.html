@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Grind LK | Crafted Coffee &amp; Cozy Moments • Colombo</title>
+  <meta name="description" content="Experience artisanal specialty coffee, ceremonial matcha, house-baked bagels, and cozy café moments at The Grind LK, Colombo 03.">
+  <meta name="theme-color" content="#120E0C">
+  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/grind-logo-gold.png">
+  
+  <!-- Google Fonts: Cormorant Garamond + Playfair Display + Plus Jakarta Sans + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=26">
+</head>
+<body class="preloader-active">
+
+  <!-- ==================== CINEMATIC VIDEO PRELOADER ==================== -->
+  <aside id="coffee-preloader" class="coffee-preloader" aria-label="Loading The Grind LK Experience">
+    <div class="preloader-media-wrapper">
+      <video id="preloader-video" class="preloader-video" autoplay muted playsinline preload="auto">
+        <source src="assets/videos/coffee-weather.mp4" type="video/mp4">
+      </video>
+      <div class="preloader-vignette"></div>
+      <div class="preloader-amber-glow"></div>
+    </div>
+
+    <!-- Header Branding -->
+    <div class="preloader-header">
+      <div class="preloader-location-tag">COLOMBO 07 &bull; SPECIALTY COFFEE</div>
+    </div>
+
+    <!-- Center Cinematic Brand Title & Featured Large Crest Logo -->
+    <div class="preloader-center-content">
+      <div class="preloader-logo-center-wrap">
+        <img src="assets/images/grind-logo-white.png" alt="The Grind LK" class="preloader-logo-center">
+      </div>
+      <span class="preloader-est">✦ SPECIALTY COFFEE ATELIER ✦</span>
+      <h2 class="preloader-hero-title">THE GRIND</h2>
+      <p class="preloader-quote">&ldquo;Where Every Pour is Pure Poetry&rdquo;</p>
+    </div>
+
+    <!-- Controls (Audio & Optional Skip) -->
+    <div class="preloader-actions">
+      <button type="button" class="preloader-sound-btn" id="preloader-sound-toggle" aria-label="Toggle Audio">
+        <i class="fa-solid fa-volume-xmark"></i>
+        <span>Sound</span>
+        <span class="preloader-audio-wave">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+      <button type="button" class="preloader-skip-btn" id="preloader-skip" aria-label="Skip video intro">
+        <span>Skip</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- Bottom Progress & Status -->
+    <div class="preloader-footer">
+      <div class="preloader-status">
+        <div class="preloader-status-left">
+          <span class="preloader-pulse-dot"></span>
+          <span class="preloader-status-text" id="preloader-status-text">CRAFTING YOUR COFFEE EXPERIENCE</span>
+        </div>
+        <span class="preloader-percent" id="preloader-percent">0%</span>
+      </div>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloader-progress-bar">
+          <span class="progress-glow-head"></span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== FIXED HEADER (NAVBAR) ==================== -->
+  <header class="site-header-fixed" id="site-header">
+    <!-- Main Navigation Bar -->
+    <nav class="navbar-wrapper" id="navbar" aria-label="Primary Navigation">
+      <div class="container navbar-container">
+        
+        <!-- Official GRIND Logo -->
+        <a href="#hero" class="brand-logo" aria-label="The Grind LK Homepage">
+          <img src="assets/images/grind-logo-white.png" alt="The Grind LK Logo" class="brand-logo-img">
+          <div class="brand-logo-text">
+            <span class="brand-logo-name">THE GRIND</span>
+            <span class="brand-logo-sub">COLOMBO</span>
+          </div>
+        </a>
+
+        <!-- Center Nav Links -->
+        <div class="nav-links">
+          <a href="#coffee-features" class="nav-link">Specialties</a>
+          <a href="#specialties" class="nav-link">Our Menu</a>
+          <a href="#story" class="nav-link">Our Story</a>
+          <a href="#reels" class="nav-link">Reels <span class="nav-badge">Live</span></a>
+          <a href="#community" class="nav-link">Community</a>
+          <a href="#locations" class="nav-link">Visit Us</a>
+        </div>
+
+        <!-- Right Action Buttons -->
+        <div class="nav-actions">
+          <!-- Live Status Mini Chip in Navbar -->
+          <div class="nav-live-indicator-pill" title="The Grind LK is currently open">
+            <span class="mini-pulse-dot"></span>
+            <span>Open Now</span>
+          </div>
+          <a href="tel:+94112345678" class="nav-phone-link" aria-label="Call Café">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <a href="#locations" class="btn btn-order-outline" aria-label="Visit Café">
+            <i class="fa-solid fa-location-dot"></i> Visit Us
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Open mobile navigation menu">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="drawer-backdrop" id="drawer-backdrop" onclick="closeDrawer()"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <div class="drawer-brand-group">
+        <img src="assets/images/grind-logo-white.png" alt="The Grind LK" class="drawer-logo">
+        <div class="drawer-brand-text">
+          <span class="drawer-brand-name">THE GRIND</span>
+          <span class="drawer-brand-sub">COLOMBO</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-drawer-status">
+      <span class="live-dot"></span>
+      <span>Open Daily &bull; 8:00 AM – 10:00 PM</span>
+    </div>
+    <nav class="mobile-drawer-links">
+      <a href="#coffee-features" class="drawer-link"><i class="fa-solid fa-mug-saucer"></i> Specialties</a>
+      <a href="#specialties" class="drawer-link"><i class="fa-solid fa-utensils"></i> Our Menu</a>
+      <a href="#story" class="drawer-link"><i class="fa-solid fa-heart"></i> Our Story</a>
+      <a href="#reels" class="drawer-link"><i class="fa-solid fa-clapperboard"></i> Video Reels</a>
+      <a href="#community" class="drawer-link"><i class="fa-solid fa-camera-retro"></i> Community &amp; Reviews</a>
+      <a href="#locations" class="drawer-link"><i class="fa-solid fa-location-dot"></i> Visit Us (Colombo 03)</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="https://maps.google.com/?q=The+Grind+LK+Colombo" target="_blank" rel="noopener noreferrer" class="btn btn-order-filled btn-block" onclick="closeDrawer();">
+        <i class="fa-solid fa-diamond-turn-right"></i> Get Directions &bull; Colombo 03
+      </a>
+      <div class="drawer-socials">
+        <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          
+          <!-- Elegant Badge -->
+          <div class="hero-pill-badge">
+            <span class="badge-gem">✦</span>
+            <span>ARTISAN SPECIALTY ROASTS &bull; COLOMBO 07</span>
+            <span class="badge-pulse-glow"></span>
+          </div>
+
+          <!-- Hero Headline with Editorial Elegance -->
+          <h1 class="hero-title">
+            Where Craft Meets<br>
+            <span class="hero-title-italic">Pure Serenity.</span>
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="hero-subtitle">
+            Artisanal single-origin espresso, delicate hand pour-overs, ceremonial Uji matcha, and warm hearth-baked bagels — crafted with relentless passion in Colombo.
+          </p>
+
+          <!-- Hero CTAs -->
+          <div class="hero-actions-wrap">
+            <a href="#specialties" class="btn btn-explore">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Explore Specialties</span>
+            </a>
+            <a href="#reels" class="btn btn-hero-secondary">
+              <i class="fa-solid fa-circle-play"></i>
+              <span>Watch Live Reels</span>
+            </a>
+          </div>
+
+          <!-- Dedicated Mobile Visual Café Photo Frame -->
+          <div class="hero-mobile-visual">
+            <div class="hero-mobile-img-wrap">
+              <img src="assets/images/grind-hero-full.jpg" alt="The Grind LK Café & Barista" class="hero-mobile-img" loading="eager">
+              <div class="hero-mobile-glass-tag">
+                <span class="mini-pulse-dot"></span>
+                <span>Specialty Pour &bull; Colombo 07</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Tags & Trust Bar -->
+          <div class="hero-trust-bar">
+            <div class="trust-item trust-item-rating">
+              <div class="trust-stars-wrap">
+                <span class="trust-stars">★ ★ ★ ★ ★</span>
+                <span class="trust-score">4.9</span>
+              </div>
+              <span class="trust-text">on Google (1,400+ reviews)</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item trust-item-origin">
+              <span class="trust-icon-box"><i class="fa-solid fa-seedling"></i></span>
+              <span class="trust-text">100% Single Origin</span>
+            </div>
+          </div>
+
+          <div class="hero-tags-pill">
+            <div class="hero-craft-chip">
+              <i class="fa-solid fa-mug-hot"></i>
+              <span>88+ Cupping Score</span>
+            </div>
+            <div class="hero-craft-chip">
+              <i class="fa-solid fa-fire-burner"></i>
+              <span>Micro-lot Roasted</span>
+            </div>
+            <div class="hero-craft-chip">
+              <i class="fa-solid fa-bread-slice"></i>
+              <span>Boiled Fresh Daily</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 FLOATING GLASSMORPHIC CARDS (BRIDGING HERO & SPECIALTIES) -->
+    <div class="hero-cards-wrapper" id="coffee-features">
+      <div class="container">
+        
+        <!-- Mobile Section Title for Cards -->
+        <div class="mobile-features-header">
+          <span class="mobile-features-tag"><i class="fa-solid fa-compass"></i> EXPLORE SPECIALTIES</span>
+          <span class="mobile-features-hint"><i class="fa-solid fa-arrows-left-right"></i> Swipe</span>
+        </div>
+
+        <div class="cards-grid">
+          
+          <!-- Card 1: Signature Coffee -->
+          <a href="#specialties" class="glass-feature-card" onclick="filterMenu('coffee')">
+            <div class="card-icon-wrap">
+              <div class="icon-bubble">
+                <i class="fa-solid fa-mug-hot"></i>
+              </div>
+            </div>
+            <h3 class="feature-card-title">Signature Coffee</h3>
+            <p class="feature-card-desc">Calibrated espresso pulls, silky cortados &amp; manual filter brews from high-altitude estates.</p>
+            <span class="feature-card-link">
+              <span>Discover Blends</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+
+          <!-- Card 2: Fresh Bakery & Bagels -->
+          <a href="#specialties" class="glass-feature-card" onclick="filterMenu('bakery')">
+            <div class="card-icon-wrap">
+              <div class="icon-bubble">
+                <i class="fa-solid fa-bread-slice"></i>
+              </div>
+            </div>
+            <h3 class="feature-card-title">Fresh Bakery &amp; Bagels</h3>
+            <p class="feature-card-desc">Traditional boiled bagels stuffed with artisanal savory schmears and treats.</p>
+            <span class="feature-card-link">
+              <span>View Bakery</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+
+          <!-- Card 3: Specialty Drinks -->
+          <a href="#specialties" class="glass-feature-card" onclick="filterMenu('matcha')">
+            <div class="card-icon-wrap">
+              <div class="icon-bubble">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+            </div>
+            <h3 class="feature-card-title">Specialty Drinks &amp; Matcha</h3>
+            <p class="feature-card-desc">Ceremonial Uji matcha, dirty cold foams, raspberry hojicha, and craft tonics.</p>
+            <span class="feature-card-link">
+              <span>Explore Drinks</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+            <a href="#specialties" class="feature-card-link" onclick="filterMenu('matcha')">
+              <span>Explore Drinks</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== OUR CAFE SPECIALTIES ==================== -->
+    <section class="specialties-section" id="specialties">
+      <!-- Decorative organic curved side accents -->
+      <div class="organic-wedge organic-wedge-right"></div>
+      <div class="organic-wedge organic-wedge-left"></div>
+
+      <div class="container specialties-container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">HANDCRAFTED DELIGHTS</span>
+          <h2 class="section-title">Our Café Specialties</h2>
+          <p class="section-subtitle">
+            Crafted with high-altitude beans, seasonal organics, and house-made delicacies. Select a category to explore:
+          </p>
+
+          <!-- Interactive Menu Category Filter Pills -->
+          <div class="menu-filter-bar" role="tablist" aria-label="Menu Categories">
+            <button class="filter-pill active" onclick="filterMenu('all', this)" role="tab" aria-selected="true">
+              <i class="fa-solid fa-border-all"></i> All Items
+            </button>
+            <button class="filter-pill" onclick="filterMenu('coffee', this)" role="tab" aria-selected="false">
+              <i class="fa-solid fa-mug-hot"></i> Coffee &amp; Espresso
+            </button>
+            <button class="filter-pill" onclick="filterMenu('matcha', this)" role="tab" aria-selected="false">
+              <i class="fa-solid fa-leaf"></i> Matcha &amp; Cold Brew
+            </button>
+            <button class="filter-pill" onclick="filterMenu('bakery', this)" role="tab" aria-selected="false">
+              <i class="fa-solid fa-bowl-food"></i> Bagels &amp; Savories
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 Specialties Grid (Using Real Photos Provided by User) -->
+        <div class="specialties-grid" id="specialties-grid">
+          
+          <!-- Item 1: Espresso Bar -->
+          <article class="specialty-card" data-category="coffee">
+            <div class="card-img-holder">
+              <img src="assets/images/signature-espresso.jpg" alt="Signature Espresso at The Grind" class="specialty-img" loading="lazy">
+              <div class="card-badge-pill">Signature</div>
+              <div class="card-price-tag">Rs. 1,150</div>
+            </div>
+            <div class="specialty-meta">
+              <div class="item-tag-row">
+                <span class="item-category-tag"><i class="fa-solid fa-mug-saucer"></i> Espresso Bar</span>
+                <span class="item-flavor">Double Shot &bull; Silky Microfoam</span>
+              </div>
+              <h3 class="item-title">Espresso Cortado &amp; Flat White</h3>
+              <p class="item-desc">High-quality handcrafted espresso blend with velvet steamed milk and sweet cocoa finish.</p>
+            </div>
+          </article>
+
+          <!-- Item 2: Fresh Pastries & Bagels -->
+          <article class="specialty-card" data-category="bakery">
+            <div class="card-img-holder">
+              <img src="assets/images/artisan-bagels.jpg" alt="Artisan Stuffed Bagels" class="specialty-img" loading="lazy">
+              <div class="card-badge-pill">Baked Daily</div>
+              <div class="card-price-tag">Rs. 1,650</div>
+            </div>
+            <div class="specialty-meta">
+              <div class="item-tag-row">
+                <span class="item-category-tag"><i class="fa-solid fa-bread-slice"></i> Artisan Bakery</span>
+                <span class="item-flavor">Boiled &amp; Baked Fresh</span>
+              </div>
+              <h3 class="item-title">Fresh Pastries &amp; Stuffed Bagels</h3>
+              <p class="item-desc">Authentic New York style boiled bagels served with garlic herb schmear, smoked salmon or eggs.</p>
+            </div>
+          </article>
+
+          <!-- Item 3: Breakfast & Poke Bowls -->
+          <article class="specialty-card" data-category="bakery">
+            <div class="card-img-holder">
+              <img src="assets/images/poke-bowl.jpg" alt="Fresh Poke Bowl" class="specialty-img" loading="lazy">
+              <div class="card-badge-pill">Healthy Choice</div>
+              <div class="card-price-tag">Rs. 1,950</div>
+            </div>
+            <div class="specialty-meta">
+              <div class="item-tag-row">
+                <span class="item-category-tag"><i class="fa-solid fa-bowl-rice"></i> Brunch Plates</span>
+                <span class="item-flavor">Fresh Ahi &bull; Edamame &bull; Avocado</span>
+              </div>
+              <h3 class="item-title">Fresh Breakfast &amp; Poke Bowls</h3>
+              <p class="item-desc">Sashimi grade fresh bowl with avocado, seasoned rice, furikake, pickled ginger and house ponzu.</p>
+            </div>
+          </article>
+
+          <!-- Item 4: Cold Dirty Matcha Selection -->
+          <article class="specialty-card" data-category="matcha">
+            <div class="card-img-holder">
+              <img src="assets/images/cold-dirty-matcha.jpg" alt="Cold Dirty Matcha Latte" class="specialty-img" loading="lazy">
+              <div class="card-badge-pill">Bestseller</div>
+              <div class="card-price-tag">Rs. 1,450</div>
+            </div>
+            <div class="specialty-meta">
+              <div class="item-tag-row">
+                <span class="item-category-tag"><i class="fa-solid fa-leaf"></i> Ceremonial Matcha</span>
+                <span class="item-flavor">Uji Matcha &bull; Single Shot &bull; Oat Milk</span>
+              </div>
+              <h3 class="item-title">Cold Dirty Matcha Latte</h3>
+              <p class="item-desc">Vivid ceremonial grade Uji matcha layered gracefully over fresh milk and a bold shot of espresso.</p>
+            </div>
+          </article>
+
+          <!-- Item 5: Dessert Specials -->
+          <article class="specialty-card" data-category="bakery">
+            <div class="card-img-holder">
+              <img src="assets/images/gochujang-mac-cheese.jpg" alt="Specialty Mains & Treats" class="specialty-img" loading="lazy">
+              <div class="card-badge-pill">Café Favorite</div>
+              <div class="card-price-tag">Rs. 1,750</div>
+            </div>
+            <div class="specialty-meta">
+              <div class="item-tag-row">
+                <span class="item-category-tag"><i class="fa-solid fa-utensils"></i> Savory Kitchen</span>
+                <span class="item-flavor">Crispy Chicken &bull; Truffle Mac</span>
+              </div>
+              <h3 class="item-title">Gochujang Savory Mac &amp; Treats</h3>
+              <p class="item-desc">Gochujang glazed chicken bites served over decadent cheesy pasta, followed by artisanal desserts.</p>
+            </div>
+          </article>
+
+          <!-- Item 6: Premium Beans -->
+          <article class="specialty-card" data-category="coffee">
+            <div class="card-img-holder">
+              <img src="assets/images/specialty-beans-myanmar.jpg" alt="Premium Single Origin Beans" class="specialty-img" loading="lazy">
+              <div class="card-badge-pill">Single Origin</div>
+              <div class="card-price-tag">Rs. 2,900</div>
+            </div>
+            <div class="specialty-meta">
+              <div class="item-tag-row">
+                <span class="item-category-tag"><i class="fa-solid fa-seedling"></i> Retail Beans</span>
+                <span class="item-flavor">Myanmar Shan State &bull; Honey Process</span>
+              </div>
+              <h3 class="item-title">Premium Retail Origin Beans (250g)</h3>
+              <p class="item-desc">Freshly roasted specialty whole beans with vibrant tasting notes of dried peach, jasmine &amp; honey.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND EXPERIENCE HIGHLIGHT ==================== -->
+    <section class="brand-experience-section" id="story">
+      <div class="container experience-container">
+        
+        <div class="experience-image-side">
+          <div class="experience-img-stack">
+            <div class="img-frame-main">
+              <img src="assets/images/grind-morning-spread.jpg" alt="Artisan Coffee Craft at The Grind" class="img-exp-1" loading="lazy">
+              <div class="img-badge-floating">
+                <span class="exp-number">100%</span>
+                <span class="exp-label">Passion in Every Cup</span>
+              </div>
+            </div>
+            <div class="img-frame-secondary">
+              <img src="assets/images/coffee-daily.jpg" alt="Daily Specialty Coffee" class="img-exp-2" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-text-side">
+          <span class="section-eyebrow">THE GRIND PHILOSOPHY</span>
+          <h2 class="experience-title">Where Specialty Coffee Meets Community</h2>
+          <p class="experience-paragraph">
+            Nestled on Dharmapala Mawatha, The Grind is Colombo's haven for specialty coffee enthusiasts. We obsess over every detail: from sourcing single-origin beans at origin to calibrating grinder burrs daily and steaming milk to microfoam perfection.
+          </p>
+          <div class="experience-features-list">
+            <div class="exp-feature-item">
+              <div class="exp-feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div>
+                <h4 class="exp-feature-title">Micro-Batch Roasting</h4>
+                <p class="exp-feature-desc">Carefully profiled beans from Myanmar, Ethiopia, and Colombia roasted to highlight delicate terroir.</p>
+              </div>
+            </div>
+            <div class="exp-feature-item">
+              <div class="exp-feature-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+              <div>
+                <h4 class="exp-feature-title">Handmade Artisan Bakery</h4>
+                <p class="exp-feature-desc">Authentic boiled bagels, flaky treats, and gourmet brunch bowls prepared fresh daily.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== THE GRIND IN MOTION (VIDEO REELS) ==================== -->
+    <section class="video-reels-section" id="reels">
+      <div class="reels-ambient-glow"></div>
+
+      <div class="container">
+        <div class="reels-header text-center">
+          <span class="reels-tag"><i class="fa-solid fa-video"></i> BEHIND THE BAR</span>
+          <h2 class="section-title text-white">The Grind in Motion</h2>
+          <p class="reels-subtext">
+            Immerse yourself in our baristas' craft. Seamless live reels with sound toggle on demand.
+          </p>
+          <div class="mobile-reels-hint">
+            <i class="fa-solid fa-arrows-left-right"></i> Scroll to swipe reels ⇄
+          </div>
+        </div>
+
+        <div class="video-reels-grid">
+          
+          <!-- Video 1: Barista Pour -->
+          <div class="reel-card" onclick="toggleReelPlay(this)">
+            <div class="reel-video-container">
+              <video class="reel-video" autoplay loop muted playsinline preload="auto" poster="assets/images/latte-art-pour.jpg">
+                <source src="assets/videos/barista-pour.mp4" type="video/mp4">
+              </video>
+              <div class="reel-top-bar">
+                <span class="reel-live-tag"><span class="reel-pulse"></span> REEL</span>
+              </div>
+              <div class="reel-play-overlay">
+                <button class="reel-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+              </div>
+              <button class="reel-mute-btn" onclick="toggleMute(event, this)" aria-label="Toggle mute">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <span class="equalizer-bars">
+                  <span></span><span></span><span></span>
+                </span>
+              </button>
+            </div>
+            <div class="reel-card-info">
+              <span class="reel-badge"><i class="fa-solid fa-mug-hot"></i> Coffee Artistry</span>
+              <h3 class="reel-title">Precision Barista Pour</h3>
+              <p class="reel-desc">Silky steamed microfoam poured into a delicate swan motif.</p>
+            </div>
+          </div>
+
+          <!-- Video 2: Matcha Ceremony -->
+          <div class="reel-card" onclick="toggleReelPlay(this)">
+            <div class="reel-video-container">
+              <video class="reel-video" autoplay loop muted playsinline preload="auto" poster="assets/images/cold-dirty-matcha.jpg">
+                <source src="assets/videos/matcha-ceremony.mp4" type="video/mp4">
+              </video>
+              <div class="reel-top-bar">
+                <span class="reel-live-tag"><span class="reel-pulse"></span> REEL</span>
+              </div>
+              <div class="reel-play-overlay">
+                <button class="reel-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+              </div>
+              <button class="reel-mute-btn" onclick="toggleMute(event, this)" aria-label="Toggle mute">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <span class="equalizer-bars">
+                  <span></span><span></span><span></span>
+                </span>
+              </button>
+            </div>
+            <div class="reel-card-info">
+              <span class="reel-badge"><i class="fa-solid fa-leaf"></i> Ceremonial Craft</span>
+              <h3 class="reel-title">Matcha Whisking Ritual</h3>
+              <p class="reel-desc">Whisked to vivid emerald froth using authentic bamboo chasen.</p>
+            </div>
+          </div>
+
+          <!-- Video 3: Specialty Foams -->
+          <div class="reel-card" onclick="toggleReelPlay(this)">
+            <div class="reel-video-container">
+              <video class="reel-video" autoplay loop muted playsinline preload="auto" poster="assets/images/raspberry-hojicha.jpg">
+                <source src="assets/videos/matcha-foams.mp4" type="video/mp4">
+              </video>
+              <div class="reel-top-bar">
+                <span class="reel-live-tag"><span class="reel-pulse"></span> REEL</span>
+              </div>
+              <div class="reel-play-overlay">
+                <button class="reel-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+              </div>
+              <button class="reel-mute-btn" onclick="toggleMute(event, this)" aria-label="Toggle mute">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <span class="equalizer-bars">
+                  <span></span><span></span><span></span>
+                </span>
+              </button>
+            </div>
+            <div class="reel-card-info">
+              <span class="reel-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Crowd Favorite</span>
+              <h3 class="reel-title">Cold Matcha Foams</h3>
+              <p class="reel-desc">Velvety lychee cold foam floating effortlessly atop matcha.</p>
+            </div>
+          </div>
+
+          <!-- Video 4: Single Origin Espresso -->
+          <div class="reel-card" onclick="toggleReelPlay(this)">
+            <div class="reel-video-container">
+              <video class="reel-video" autoplay loop muted playsinline preload="auto" poster="assets/images/signature-espresso.jpg">
+                <source src="assets/videos/single-origin-espresso.mp4" type="video/mp4">
+              </video>
+              <div class="reel-top-bar">
+                <span class="reel-live-tag"><span class="reel-pulse"></span> REEL</span>
+              </div>
+              <div class="reel-play-overlay">
+                <button class="reel-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+              </div>
+              <button class="reel-mute-btn" onclick="toggleMute(event, this)" aria-label="Toggle mute">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <span class="equalizer-bars">
+                  <span></span><span></span><span></span>
+                </span>
+              </button>
+            </div>
+            <div class="reel-card-info">
+              <span class="reel-badge"><i class="fa-solid fa-droplet"></i> Extraction</span>
+              <h3 class="reel-title">Single Origin Pull</h3>
+              <p class="reel-desc">9-bar pressure extraction producing rich golden crema.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL & COMMUNITY GALLERY ==================== -->
+    <section class="social-section" id="community">
+      <div class="container social-container">
+        
+        <!-- Left: Luxury Testimonial Card -->
+        <div class="testimonial-box">
+          <span class="section-eyebrow">WHAT OUR GUESTS SAY</span>
+          <div class="testimonial-card-wrap">
+            <div class="quote-mark-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="star-rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <span class="rating-label">5.0 Star Experience</span>
+            </div>
+            <p class="testimonial-text">
+              “Thank you all for the most relaxing experience and incredible coffee. The Grind team provides the highest premium beverages and warm hospitality. We always feel welcomed at the café and cherish every visit.”
+            </p>
+            <div class="testimonial-author">
+              <div class="avatar-circle">
+                <img src="assets/images/team-grind.jpg" alt="Ethan Nelson" class="avatar-img">
+              </div>
+              <div class="author-details">
+                <h4 class="author-name">Ethan Nelson</h4>
+                <p class="author-sub"><i class="fa-solid fa-circle-check" style="color: #D4A373;"></i> Verified Patron &bull; Regular Guest at Colombo 03</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Instagram Gallery (Using Real Photos Provided by User) -->
+        <div class="instagram-box">
+          <div class="ig-box-header">
+            <div>
+              <span class="ig-eyebrow"><i class="fa-brands fa-instagram"></i> INSTAGRAM FEED</span>
+              <h3 class="ig-title">Follow @thegrindlk</h3>
+            </div>
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="btn btn-ig-follow">
+              Follow Us
+            </a>
+          </div>
+
+          <div class="instagram-grid">
+            
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+              <img src="assets/images/latte-art-pour.jpg" alt="Swan latte art pour" loading="lazy">
+              <div class="ig-overlay">
+                <span><i class="fa-solid fa-heart"></i> 1.2k</span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="ig-tile has-badge">
+              <img src="assets/images/cold-dirty-matcha.jpg" alt="Cold dirty matcha" loading="lazy">
+              <span class="ig-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="ig-overlay">
+                <span><i class="fa-solid fa-heart"></i> 940</span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+              <img src="assets/images/artisan-bagels.jpg" alt="Artisan stuffed bagel" loading="lazy">
+              <div class="ig-overlay">
+                <span><i class="fa-solid fa-heart"></i> 820</span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="ig-tile has-badge">
+              <img src="assets/images/raspberry-hojicha.jpg" alt="Raspberry hojicha" loading="lazy">
+              <span class="ig-badge"><i class="fa-brands fa-instagram"></i></span>
+              <div class="ig-overlay">
+                <span><i class="fa-solid fa-heart"></i> 1.5k</span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+              <img src="assets/images/coffee-daily.jpg" alt="Latte art on marble" loading="lazy">
+              <div class="ig-overlay">
+                <span><i class="fa-solid fa-heart"></i> 760</span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="ig-tile">
+              <img src="assets/images/grind-morning-spread.jpg" alt="Morning coffee spread" loading="lazy">
+              <div class="ig-overlay">
+                <span><i class="fa-solid fa-heart"></i> 1.8k</span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== LOCATIONS & VISIT US ==================== -->
+    <section class="locations-strip" id="locations">
+      <div class="container">
+        
+        <div class="location-card-banner">
+          <div class="location-col-brand">
+            <img src="assets/images/grind-logo-white.png" alt="The Grind Logo" class="footer-brand-logo">
+            <p class="brand-tagline">Crafted Coffee &bull; Artisanal Bakery &bull; Warm Memories</p>
+            <div class="location-meta-items">
+              <div class="meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>49/1 Dharmapala Mawatha, Colombo 03, Sri Lanka</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Open Daily: 8:00 AM – 10:00 PM</span>
+              </div>
+              <div class="meta-item">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <span>Unplug &amp; Unwind &bull; Cozy Ambiance (No Laptops during rush hours)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-col-actions">
+            <a href="https://maps.google.com/?q=The+Grind+LK+Colombo" target="_blank" rel="noopener noreferrer" class="btn btn-order-filled">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+            <a href="https://www.instagram.com/thegrindlk/" target="_blank" rel="noopener noreferrer" class="btn btn-order-outline">
+              <i class="fa-brands fa-instagram"></i> Follow @thegrindlk
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <p class="copyright-text">&copy; 2026 The Grind LK. All rights reserved. Crafted with care in Colombo, Sri Lanka.</p>
+          <div class="footer-links">
+            <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript -->
+  <script src="app.js?v=26"></script>
+</body>
+</html>
